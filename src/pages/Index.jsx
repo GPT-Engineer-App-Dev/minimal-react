@@ -1,5 +1,6 @@
-import { Container, Text, VStack, Box, Flex, Spacer, IconButton, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Container, Text, VStack, Box, Flex, Spacer, IconButton, useColorMode, useColorModeValue, Button } from "@chakra-ui/react";
 import { FaSun, FaMoon } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const { toggleColorMode } = useColorMode();
@@ -13,6 +14,9 @@ const Index = () => {
         </Box>
         <Spacer />
         <Box>
+          <Link to="/login">
+            <Button>Login</Button>
+          </Link>
           <IconButton aria-label="Toggle theme" icon={icon} onClick={toggleColorMode} />
         </Box>
       </Flex>
